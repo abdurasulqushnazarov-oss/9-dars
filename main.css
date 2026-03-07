@@ -328,7 +328,7 @@ header {
 }
 
 .card {
-  max-width: 384px;
+  width: 384px;
   border-radius: 16px;
   padding: 33px;
   border: 1px solid #e5e7eb;
@@ -344,7 +344,7 @@ header {
     font-size: 20px;
   }
   span {
-    font-size: 16pxs;
+    font-size: 16px;
     color: #6b7280;
   }
 }
@@ -360,5 +360,9 @@ header {
   }
   .card {
     width: 100%;
+  }
+  .card:hover {
+    transform: scale(1.1);
+    transition: all 0.4s;
   }
 }
