@@ -158,12 +158,12 @@ a {
 }
 
 a:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
   transition: all 0.4s linear;
 }
 
 button:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
   transition: all 0.4s linear;
   cursor: pointer;
 }
@@ -176,6 +176,7 @@ header {
   width: 100%;
   max-width: 1216px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 .site-nav {
@@ -190,6 +191,11 @@ header {
   display: flex;
   align-items: center;
   gap: 32px;
+
+  i {
+    display: none;
+  }
+
   a {
     color: #0f1729;
     font-weight: 500;
@@ -206,6 +212,18 @@ header {
   }
 }
 
+@media (max-width: 768px) {
+  .links {
+    gap: 12px;
+    i {
+      display: block;
+    }
+    a {
+      display: none;
+    }
+  }
+}
+
 .birinchi-section {
   background: linear-gradient(#f1f1fe, #f7f1fd);
 }
@@ -214,6 +232,8 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-top: 128px;
+  padding-bottom: 128px;
 }
 .section h1 {
   font-size: 60px;
@@ -224,7 +244,7 @@ header {
 .section p {
   margin-top: 24px;
   margin-bottom: 24px;
-  width: 488px;
+  max-width: 488px;
   font-size: 20px;
   color: #6b7280;
   line-height: 28px;
@@ -237,11 +257,7 @@ header {
   color: white;
   border: none;
 }
-.section .btn:hover {
-  transform: scale(1.1);
-  transition: all 0.4s linear;
-  cursor: pointer;
-}
+
 .button {
   display: flex;
   gap: 16px;
@@ -262,8 +278,87 @@ header {
   margin-top: 70px;
 }
 
+@media (max-width: 1159px) {
+  .one-section {
+    margin: 0 auto;
+  }
+
+  .section-img {
+    img {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  .button {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 .two-section {
+  padding-top: 128px;
+  padding-bottom: 128px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+}
+
+.reason {
+  max-width: 672px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+
+  margin-bottom: 64px;
+
+  span {
+    text-align: center;
+    color: #6b7280;
+  }
+}
+
+.ability {
+  display: flex;
+  gap: 32px;
+}
+
+.card {
+  max-width: 384px;
+  border-radius: 16px;
+  padding: 33px;
+  border: 1px solid #e5e7eb;
+
+  img {
+    margin-bottom: 16px;
+  }
+
+  h2 {
+    margin-bottom: 8.5px;
+    font-weight: 600;
+    color: #0f1729;
+    font-size: 20px;
+  }
+  span {
+    font-size: 16pxs;
+    color: #6b7280;
+  }
+}
+
+.card:hover {
+  transform: scale(1.1);
+  transition: all 0.4s;
+}
+
+@media (max-width: 900px) {
+  .ability {
+    flex-direction: column;
+  }
+  .card {
+    width: 100%;
+  }
 }
